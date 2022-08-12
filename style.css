@@ -1,0 +1,31 @@
+
+ html{  background-color:#FFF5EE;}
+ span { border:3px solid brown ;
+text-transform: uppercase;
+   color:black;
+background-color:#FFDAB9;
+ font-size:30px;}
+ h1 { border:3px solid brown;
+  color:red;
+paddingcolor:brown;
+margin:90px;
+margin-color:brown;
+background-color:#FFDAB9;
+   text-align:center;
+ font-size:100px;}
+ h2{
+   font-size:80px;
+ }
+ #CC{
+   color:black;
+ }
+h4{border:3px solid brown;
+padding:30px;
+paddingcolor:brown;
+margin:90px;
+margin-color:brown;
+background-color:#FFDAB9;
+
+font-size:20px;
+
+}
