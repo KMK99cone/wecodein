@@ -29,3 +29,10 @@ background-color:#FFDAB9;
 font-size:20px;
 
 }
+
+section {
+  width: 50vmin;
+  margin-top: 10vmin;
+  display: grid;
+  grid-auto-flow: column;
+}
