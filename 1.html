@@ -2,8 +2,18 @@
 <html>
 <head>
  <title> My self-introduction </title>
+ <script>
+  let current = new Date();
+
+
+    let hrs = current.getHours();
+  if(hrs >12){
+    document.body.style.backgroundColor = "#FF8585";
+  }else{document.body.style.backgroundColor =  "#FFDAB9";}
+hrs();
+</script>
 <style>
- html{  background-color:#FFF5EE;}
+ html{  background-color:#FFF5EE;} 
  h1 { border:3px solid brown;
   color:red;
 paddingcolor:brown;
@@ -12,7 +22,7 @@ margin-color:brown;
 background-color:#FFDAB9;
    text-align:center;
  font-size:100px;}
-#AB{
+#AB{ box-sizing: 1fr;
 
 }
 #AA{
@@ -44,10 +54,16 @@ background-color:#FFDAB9;
 
 </div>
 <div>
+  
   <ol id="AB">
-<li> <a href="I.html"> I </li>
+<li> <span><p onmouseover="this.style.backgroundColor='red'"
+  onmouseout="this.style.backgroundColor='white'"
+> <a href="I.html"> I </li> 
 
-<li> <a href="취미.html">취미</li>
+<li> <p onmouseover="this.style.backgroundColor='red'"
+  onmouseout="this.style.backgroundColor='white'"><a href="취미.html">취미</li></span>
+
+  </ol>
 </div>
 </div>
 
