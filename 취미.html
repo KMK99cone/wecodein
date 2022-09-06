@@ -59,129 +59,208 @@ font-size: 30px;
 
 <span>
   <ol id="AA">
-<h1><li> <a> drama </a> : 
-<select id="drama" name="drama" onchange="A()">
-  <option value="D" selected="selected" style="background-color : #ccc">카테고리</option>
-  <option value = "H"> 한국드라마</option>
-  <option value = "A"> 미국드라마</option>
-  <option value = "C"> 중국드라마</option>
-  <option value = "J"> 일본드라마</option>
-  </select> 
+<h1><li> <a> drama </a> :  
+  <div class = "slideshow-container">
+    <!--Full-width images with number and caption text-->
+    <div class = "mySlides fade">
+      <div class="numbertext">1 / 4</div>
+      <a href ="H.html" target="_blank" rel="noopner noreferrer nofollow" data-testid="drama-link" data-idx="20232">
+        <img src ="H.jpg" style="width:100%">
+        <div class ="text"> 한국드라마</div>
+      </a>
+    
+    
+    </div>
+    <div class = "mySlides fade">
+      <div class="numbertext">2 / 4</div>
+      <a href ="A.html" target="_blank" rel="noopner noreferrer nofollow" data-testid="drama-link" data-idx="20232">
+        <img src ="A.jpeg" style="width:100%">
+        <div class ="text"> 미국드라마</div>
+      </a>
+    </div>
+
+
+    <div class = "mySlides fade">
+      <div class="numbertext">3 / 4</div>
+      <a href ="C.html" target="_blank" rel="noopner noreferrer nofollow" data-testid="drama-link" data-idx="20232">
+        <img src ="C.jpeg" style="width:100%">
+        <div class ="text"> 중국드라마</div>
+      </a>
+    </div>
+    <div class = "mySlides fade">
+      <div class="numbertext">4 / 4</div>
+      <a href ="J.html" target="_blank" rel="noopner noreferrer nofollow" data-testid="drama-link" data-idx="20232">
+        <img src ="J.jpeg" style="width:100%">
+        <div class ="text"> 일본드라마</div>
+      </a>
+    </div>
+    <a class="prev" onclick="plusSlides(-1)"><</a>
+    <a class="next" onclick="plusSlides(1)">></a>
+  </div>
+  
+  <div style="text-align: center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+  </div>
+  
+  <!--CSS 추가-->
+  <style>
+    a{
+  
+     text-decoration: none;
+    }
+  *{box-sizing:border-box}
+  .myslides{display: none;} 
+  img{
+    vertical-align: middle;
+  }
+  .slideshow-container {
+  max-width:500px;
+  position:relative;
+  margin: auto;
+  }
+  
+  .prev, .next{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.5s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  
+  }
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  .prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  .prev:hover, .next:hover{
+    background-color: white;
+  }
+  .text{
+    color: #f09090;
+    font-size: 15px;
+    padding: 8px 12px;
+    bottom :8px;
+    width:100%;
+    text-align: center;
+    text-decoration-line:none;
+
+  }
+  .numbertext{
+    color: antiquewhite;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  .dot{
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color:  #ff9473;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  .active,.dot:hover{
+    background-color: #717171;
+  
+  }
+  .fade{
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  @keyframes fade {
+    from {opacity: .4}
+    to{opacity: 1}
+  }
+  </style>
+  
+  <script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+slideIndex++;
+  
+if (slideIndex > slides.length) {slideIndex = 1} 
+
+
+  slides[slideIndex-1].style.display = "block"; 
+  
+   setTimeout(showSlides, 2000);
+  </script>
+
+
+
+</li></h1>
+  
+<!-- 음악 select로 넣기 -->
+
+<h1><li>
+
+  <a> music </a> :
+  
+ 
+  <select id = "music">
+  <option value = "드림캐쳐">드림캐쳐</option>
+<option value = "안예은">안예은</option>
+<option value = "kenshi Yonezu">kenshi Yonezu</option>
+<option value = "yoasobi">yoasobi</option>
+<option value = "purple kiss">purple kiss</option></li></h1>
+
+
+</select>
+
 
 
 
 <!--
-   id = "songbox" class="listbox" style="list-style : none;">
-    <li>
-        
-        <a id = "H"></a>
-    </li>
-    <li>
-        
-        <a id = "A"></a>
-    </li>
-    <li>
-        <a id = "C"></a>
-    </li>
-    <li>
-        
-        <a id = "D"></a>
-    </li>
-</ul>
-<script>
-
-</script>
--->
-<script>
-const A = [
-  {
-    jpg:"A.jpeg"
-    url : "A.html"
-  }
-]
-const H= [
-  {
-    jpg:"H.jpg"
-    url : "H.html"
-  }
-]
-const C = [
-  {
-    jpg:"C.jpeg"
-    url : "C.html"
-  }
-]
-const J = [
-  {
-    jpg:"J.jpeg"
-    url : "J.html"
-  }
-]
- function Change(){
-  if(select.value == "H"){
-    H.innetText = "한국드라마"
-       H.href = "H.html"
-  }else if (select.value == "A"){
-    A.innetText = "미국드라마"
-     A.href = "A.html"
-  }else if (select.value == "C"){
-    C.innetText = "중국드라마"
-    C.href = "C.html"
-  }else if (select.value == "J"){
-    J.innetText = "일본드라마"
-    J.href = "J.html"
-  }
-
-  }
-
-  Select.addEventListener("change", Change);
- </script>
- <!--
- location 객체 성수님 보고 생각하기
- 
-  <script type="text/javascript">
-    function A(){
-      let B = document.getElementById ("drama")
-      if(B.options[B.selectedIndex].value == "H"){
-        location.href = "file:///Users/k/Desktop/무제%20폴더%202/H.html";
-      } if (B.options[B.selectedIndex].value == "A"){
-        location.href = "file:///Users/k/Desktop/무제%20폴더%202/A.html";
-      }if (B.options[B.selectedIndex].value == "C"){
-        location.href = "file:///Users/k/Desktop/무제%20폴더%202/C.html";
-      } if (B.options[B.selectedIndex].value == "J"){
-        location.href = "file:///Users/k/Desktop/무제%20폴더%202/J.html";
-      } else {
-        location.href = "취미.html"
-      }
-
-
-  </script>
-
-<script>
-  
-</script>
-</datalist>
---> 
-</li></h1>
-  
-
-<h1><li> <a> music </a> :
-<input type="text" list = "music"> <br>
-<datalist id="music">
-<option value = "드림캐쳐"></option>
-<option value = "안예은"></option>
-<option value = "kenshi Yonezu"></option>
-<option value = "yoasobi"></option>
-<option value = "purple kiss"></option></li></h1>
-<!--<ol id="AB">
+   <ol id="AB">
 <li> <a>  드림캐쳐</li>
   <li> <a>  안예은</li>
   <li> <a>  kenshi Yonezu</li>
     <li> <a>  yoasobi </li>
       <li> <a>  purple kiss</li>
-</ol>-->
+</ol>
+-->
 </ol>
 </body>
 </span>
 <foot>
- <h4><a id="cc"  href="1.html"> < back to introducting </h4>
+ <h4> <a id="cc"  href="1.html"> <-- back to introducting </h4>
